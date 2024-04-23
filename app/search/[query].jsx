@@ -1,11 +1,9 @@
-import { FlatList, Image, RefreshControl, Text, View } from "react-native";
+import { useEffect } from "react";
+import { FlatList, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { useEffect, useState } from "react";
 import EmptyState from "../../components/EmptyState";
 import SearchInput from "../../components/SearchInput";
-import Trending from "../../components/Trending";
-import { images } from "../../constants";
 import { searchPosts } from "../../lib/appwrite";
 import useAppwrite from "../../lib/useAppwrite";
 import VideoCard from "../../components/VideoCard";
@@ -19,7 +17,7 @@ const Search = () => {
 
   useEffect(() => {
     refetch()
-  }, [])
+  }, [query])
 
   return (
     <SafeAreaView className="bg-primary h-full">
