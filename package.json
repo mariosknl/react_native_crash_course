@@ -27,7 +27,7 @@
     "expo-image-picker": "~56.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
+    "@babel/core": "^8.0.0",
     "tailwindcss": "^4.0.0"
   },
   "private": true
